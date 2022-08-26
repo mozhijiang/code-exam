@@ -2,7 +2,7 @@
     "miniprogramRoot": "dist/",
     "projectname": "code-exam",
     "description": "技术刷题小程序",
-    "appid": "touristappid",
+    "appid": "wx297deb979521c60b",
     "setting": {
         "urlCheck": true,
         "es6": false,
@@ -15,7 +15,9 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "ignoreUploadUnusedFiles": false
+        "ignoreUploadUnusedFiles": false,
+        "minifyWXSS": false,
+        "minifyWXML": false
     },
     "compileType": "miniprogram",
     "libVersion": "2.25.3",

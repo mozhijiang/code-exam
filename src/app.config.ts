@@ -1,10 +1,15 @@
+import Theme from "./theme/theme";
 export default defineAppConfig({
   pages: [
-    'pages/index/index'
+    'pages/books/books',
+    'pages/my/my'
   ],
+  usingComponents: {
+    'custom-wrapper': '/custom-wrapper',
+  },
   window: {
-    backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
+    backgroundTextStyle: 'dark',
+    navigationBarBackgroundColor: Theme.light,
     navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black'
   }

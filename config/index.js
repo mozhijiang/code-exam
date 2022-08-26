@@ -1,3 +1,4 @@
+const path = require("path");
 const config = {
   projectName: 'code-exam',
   date: '2022-8-19',
@@ -47,6 +48,7 @@ const config = {
     }
   },
   h5: {
+    esnextModules: ['taro-ui'],
     publicPath: '/',
     staticDirectory: 'static',
     postcss: {
@@ -71,7 +73,16 @@ const config = {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
       }
     }
-  }
+  },
+  alias: {
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/pages': path.resolve(__dirname, '..', 'src/pages'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@/api': path.resolve(__dirname, '..', 'src/api'),
+    '@/theme': path.resolve(__dirname, '..', 'src/theme'),
+    '@/package': path.resolve(__dirname, '..', 'package.json'),
+    '@/project': path.resolve(__dirname, '..', 'project.config.json'),
+  },
 }
 
 module.exports = function (merge) {
