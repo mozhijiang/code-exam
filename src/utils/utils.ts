@@ -12,7 +12,6 @@ function objectToUrl(obj: object) {
     }
     return _result.join('&');
 };
-
 export default {
     objectToUrl
 };

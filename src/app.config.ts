@@ -1,4 +1,4 @@
-import Theme from "./theme/theme";
+import { BaseTheme } from "../src/theme/theme";
 export default defineAppConfig({
   pages: [
     'pages/books/books',
@@ -9,7 +9,7 @@ export default defineAppConfig({
   },
   window: {
     backgroundTextStyle: 'dark',
-    navigationBarBackgroundColor: Theme.light,
+    navigationBarBackgroundColor: new BaseTheme().light,
     navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black'
   }

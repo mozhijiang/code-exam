@@ -1,11 +1,12 @@
 import Taro from "@tarojs/taro";
 import { FC } from "react";
 import { AtTabBar } from "taro-ui";
-import Theme from "@/theme/theme";
+import { useTheme } from '../utils/useHooks';
 class Props {
     tabIndex?= 0;
 };
 const TabBar: FC<Props> = (props) => {
+    const theme = useTheme();
     const tabBars = [
         {
             item: { title: '题库', iconPrefixClass: 'iconfont', iconType: 'tiku' },
@@ -24,7 +25,7 @@ const TabBar: FC<Props> = (props) => {
         }
     }
     return (
-        <AtTabBar fixed selectedColor={Theme.base} tabList={tabBars.map(tab => tab.item)} current={props.tabIndex || 0} onClick={tabBarClick} />
+        <AtTabBar fixed selectedColor={theme.base} color={theme.color} backgroundColor={theme.background} tabList={tabBars.map(tab => tab.item)} current={props.tabIndex || 0} onClick={tabBarClick} />
     );
 }
 export default TabBar;

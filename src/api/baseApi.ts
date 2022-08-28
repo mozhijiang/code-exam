@@ -1,6 +1,6 @@
-import utils from "@/utils/utils";
+import utils from "../utils/utils";
 import Taro from "@tarojs/taro";
-import config from '../config';
+import { baseUrl } from '../config';
 class ListQuery {
     page: number;
     size: number;
@@ -35,7 +35,7 @@ class BaseApi<E>{
     baseUrl: string;
     constructor(moduleName: string) {
         this.moduleName = moduleName;
-        this.baseUrl = `${config.baseUrl}/${this.moduleName}`;
+        this.baseUrl = `${baseUrl}/${this.moduleName}`;
     }
     list(query: ListQuery) {
         return requestContainer<[E[], number]>({

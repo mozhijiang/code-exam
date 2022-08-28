@@ -1,0 +1,14 @@
+.at-list {
+    background-color: unset;
+}
+.at-list__item {
+    color: unset;
+}
+.at-list__item::after {
+    border: unset;
+}
+.at-list::after{
+    border-bottom-width: unset;
+    border-top-width: unset;
+    border: unset;
+}

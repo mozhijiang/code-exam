@@ -13,7 +13,7 @@
     "noUnusedParameters": true,
     "strictNullChecks": true,
     "sourceMap": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "rootDir": ".",
     "jsx": "react-jsx",
     "allowJs": true,
@@ -22,13 +22,9 @@
       "node_modules/@types"
     ],
     "paths": {
-      "@/components/*": ["./src/components/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/api/*": ["./src/api/*"],
-      "@/theme/*": ["./src/theme/*"],
-      "@/package": ["./package.json"],
-      "@/project": ["./project.config.json"],
+      "@/*": ["./src"],
+      // "@/package": ["./package.json"],
+      // "@/project": ["./project.config.json"],
     }
   },
   "include": [
