@@ -7,6 +7,8 @@ import { FC } from "react";
 import { useTheme } from '../../utils/useHooks';
 import defaultCover from '../../static/default_cover.png';
 import { BaseTheme } from '../../theme/theme';
+import { AtRate } from 'taro-ui';
+import { AtTag } from 'taro-ui';
 class Props {
     book: BookMeta
 };
@@ -24,6 +26,7 @@ const BookItem: FC<Props> = (props) => {
         background: theme.background,
         color: theme.color
     };
+    const tags = props.book.tags?.map(tag => <AtTag customStyle={{marginRight:Taro.pxTransform(15)}} type='primary' size="small" active={true}>{tag.name}</AtTag>)
     return (
         <View style={itemStyle}>
             <Image style={coverStyle} mode="widthFix" src={
@@ -31,6 +34,10 @@ const BookItem: FC<Props> = (props) => {
             } />
             <View>
                 <Text>{props.book.name}</Text>
+                <AtRate customStyle={{marginTop: Taro.pxTransform(10)}} value={5} />
+                <View style={{marginTop: Taro.pxTransform(15)}}>
+                    {tags}
+                </View>
             </View>
         </View>
     );

@@ -2,7 +2,7 @@
 
 ### 介绍
 
-基于Taro与NestJS开发技术刷题小程序，技术栈主要是`taro+typescript+nestjs+postgresql`，由于已经学过一段时间React，但工作上总是用不上，小项目也写过，但没有使用`React`写过正经一点的项目，主要是借助此项目重新总结`React`核心概念，打造一个实战项目，如果你也正在学习`React`和`typescript`，不妨看看此项目，此项目会持续更新，欢迎watch和star～
+基于`Taro`与`NestJS`开发技术刷题小程序，技术栈主要是`taro+typescript+nestjs+postgresql`，由于已经学过一段时间React，但工作上总是用不上，小项目也写过，但没有使用`React`写过正经一点的项目，主要是借助此项目重新总结`React`核心概念，打造一个实战项目，如果你也正在学习`React`和`typescript`，不妨看看此项目，此项目会持续更新，欢迎watch和star～
 
 ### 功能列表
 
@@ -11,6 +11,8 @@
 - [ ] 题库
 - [ ] 刷题
 - [ ] 用户登录
+- [ ] 题库评论+评分
+- [ ] 题目评论
 - [ ] 收藏题库
 - [ ] 收藏题目
 - [ ] 做错题目
@@ -28,6 +30,7 @@
 --config.ts //项目配置文件
 ```
 
-
+另外，想参考或自己搭建`NestJS`后端的可转移到[NestJS后端项目](https://github.com/mozhijiang/code-exam-nest)
 
 ### 项目截图
+
