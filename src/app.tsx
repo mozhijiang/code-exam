@@ -7,12 +7,8 @@ import './icon.scss';
 import globalData from './utils/globalData';
 const App: FC = (props: any) => {
   useEffect(() => {
-    Taro.getStorage<string>({
-      key: 'theme',
-      success: function (res) {
-        if (res?.data && globalData.currentThtme !== res.data) globalData.changeTheme(res.data)
-      }
-    })
+    const theme: string = Taro.getStorageSync('theme');
+    if( theme ) globalData.changeTheme(theme);
   }, []);
   return (
     <View>

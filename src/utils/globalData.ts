@@ -6,7 +6,8 @@ const themeList: { [themeName: string]: BaseTheme } = {
     dark: new DarkTheme,
     light: new LightTheme
 };
-const setThemeList: React.Dispatch<BaseTheme>[] = [];
+const setThemeList: React.Dispatch<React.SetStateAction<BaseTheme>>[] = [];
+
 const globalData = {
     api,
     utils,
@@ -20,7 +21,7 @@ const globalData = {
             data: themeName
         });
     },
-    registoryTheme(setTheme) { setThemeList.push(setTheme) },
-    unRegistoryTheme(setTheme) { setThemeList.splice(setThemeList.indexOf(setTheme), 1) }
+    registoryTheme(setTheme:React.Dispatch<React.SetStateAction<BaseTheme>>) { setThemeList.push(setTheme) },
+    unRegistoryTheme(setTheme:React.Dispatch<React.SetStateAction<BaseTheme>>) { setThemeList.splice(setThemeList.indexOf(setTheme), 1) }
 };
 export default globalData;
