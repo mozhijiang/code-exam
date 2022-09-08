@@ -1,7 +1,7 @@
 export default defineAppConfig({
   pages: [
     'pages/books/books',
-    'pages/books/catelogList',
+    'pages/books/catelogs',
     'pages/my/my',
   ],
   usingComponents: {
