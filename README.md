@@ -8,7 +8,7 @@
 
 - [x] 基础结构
 - [x] 深色模式
-- [ ] 题库
+- [x] 题库
 - [ ] 刷题
 - [ ] 用户登录
 - [ ] 题库评论+评分
@@ -30,7 +30,8 @@
 --config.ts //项目配置文件
 ```
 
-另外，想参考或自己搭建`NestJS`后端的可转移到[NestJS后端项目](https://github.com/mozhijiang/code-exam-nest)
+另外，后端还在搭建中...想参考或自己搭建`NestJS`后端的可转移到[NestJS后端项目](https://github.com/mozhijiang/code-exam-nest)
 
 ### 项目截图
 
+![](https://raw.githubusercontent.com/mozhijiang/static/main/20220830222813.png)![](https://raw.githubusercontent.com/mozhijiang/static/main/20220830223038.png)![](https://raw.githubusercontent.com/mozhijiang/static/main/20220909001839.png)
