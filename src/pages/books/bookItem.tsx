@@ -26,16 +26,21 @@ const BookItem: FC<Props> = (props) => {
         background: theme.background,
         color: theme.color
     };
-    const tags = props.book.tags?.map(tag => <AtTag customStyle={{marginRight:Taro.pxTransform(15)}} type='primary' size="small" active={true}>{tag.name}</AtTag>)
+    const tags = props.book.tags?.map(tag => <AtTag customStyle={{ marginRight: Taro.pxTransform(15) }} type='primary' size="small" active={true}>{tag.name}</AtTag>)
+    function toCatelogList() {
+        Taro.navigateTo({
+            url: `./catelogList?bookName=${props.book.name}`
+        })
+    }
     return (
-        <View style={itemStyle}>
+        <View style={itemStyle} onClick={toCatelogList}>
             <Image style={coverStyle} mode="widthFix" src={
                 props.book?.cover?.path ? StorageMeta.displayPath(props.book?.cover?.path) : defaultCover
             } />
             <View>
                 <Text>{props.book.name}</Text>
-                <AtRate customStyle={{marginTop: Taro.pxTransform(10)}} value={5} />
-                <View style={{marginTop: Taro.pxTransform(15)}}>
+                <AtRate customStyle={{ marginTop: Taro.pxTransform(10) }} value={props.book.level} />
+                <View style={{ marginTop: Taro.pxTransform(15) }}>
                     {tags}
                 </View>
             </View>
