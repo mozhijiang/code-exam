@@ -16,7 +16,7 @@ const coverStyle: CSS.Properties = {
     width: Taro.pxTransform(130),
     marginRight: Taro.pxTransform(BaseTheme.baseSpace)
 };
-const BookItem: FC<Props> = (props) => {
+const Book: FC<Props> = (props) => {
     const theme = useTheme();
     const itemStyle: CSS.Properties = {
         display: 'flex',
@@ -29,7 +29,7 @@ const BookItem: FC<Props> = (props) => {
     const tags = props.book.tags?.map(tag => <AtTag customStyle={{ marginRight: Taro.pxTransform(15) }} type='primary' size="small" active={true}>{tag.name}</AtTag>)
     function toCatelogList() {
         Taro.navigateTo({
-            url: `./catelogList?bookName=${props.book.name}`
+            url: `./catelogs?bookId=${props.book.bookId}&bookName=${props.book.name}`
         })
     }
     return (
@@ -47,4 +47,4 @@ const BookItem: FC<Props> = (props) => {
         </View>
     );
 }
-export default BookItem;
+export default Book;

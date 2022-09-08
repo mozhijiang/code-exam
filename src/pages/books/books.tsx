@@ -3,7 +3,7 @@ import TabBar from "../../components/tabBar";
 import globalData from '../../utils/globalData';
 import { ListData } from "../../api/baseApi";
 import { BookMeta } from "../../api/bookApi";
-import BookItem from "./bookItem";
+import Book from "./book";
 import GlobalStyle from "../../components/globalStyle";
 import NavBar from "../../components/navBar";
 const Books: FC = () => {
@@ -23,11 +23,11 @@ const Books: FC = () => {
             })
         })
     }, [bookList.query]);
-    const bookItems = bookList.list.map(book => <BookItem book={book} />)
+    const bookTags = bookList.list.map(book => <Book book={book} />)
     return (
         <GlobalStyle>
             <NavBar title="卑微前端在线刷题" />
-            {bookItems}
+            {bookTags}
             <TabBar />
         </GlobalStyle>
     );

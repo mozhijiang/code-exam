@@ -2,7 +2,7 @@ import { BaseApi } from "./baseApi";
 import { StorageMeta } from "./storageApi";
 import { TagMeta } from "./tagApi";
 class BookMeta {
-    bookId: string;
+    bookId: number;
     name: string;
     cover: StorageMeta;
     tags: TagMeta[];
