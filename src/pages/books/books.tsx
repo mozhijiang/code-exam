@@ -5,6 +5,7 @@ import { ListData } from "../../api/baseApi";
 import { BookMeta } from "../../api/bookApi";
 import BookItem from "./bookItem";
 import GlobalStyle from "../../components/globalStyle";
+import NavBar from "../../components/navBar";
 const Books: FC = () => {
     const [bookList, setBookList] = useState(new ListData<BookMeta>());
     useEffect(() => {
@@ -25,6 +26,7 @@ const Books: FC = () => {
     const bookItems = bookList.list.map(book => <BookItem book={book} />)
     return (
         <GlobalStyle>
+            <NavBar title="卑微前端在线刷题" />
             {bookItems}
             <TabBar />
         </GlobalStyle>

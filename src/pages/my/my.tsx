@@ -10,6 +10,7 @@ import Taro from "@tarojs/taro";
 import { BaseTheme } from "../../theme/theme";
 import globalData from "../../utils/globalData";
 import './my.css';
+import NavBar from "../../components/navBar";
 const userInfoStyle: CSS.Properties = {
     display: "flex"
 };
@@ -36,6 +37,7 @@ const My: FC = () => {
     };
     return (
         <GlobalStyle>
+            <NavBar title="我的" />
             <View style={userContainerStyle}>
                 <View style={userInfoStyle}>
                     <AtAvatar size="large" image={defaultCover}></AtAvatar>
