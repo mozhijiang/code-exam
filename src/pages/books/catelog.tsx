@@ -18,8 +18,13 @@ const itemStyle: CSS.Properties = {
     paddingRight: 0
 };
 const Catelog: FC<Props> = (props) => {
+    function toQuestion(){
+        Taro.navigateTo({
+            url: `./question?questionId=${props.catelog.questionId}&title=${props.catelog.title}`
+        })
+    }
     const theme = useTheme();
-    return <View style={itemStyle}>
+    return <View style={itemStyle} onClick={toQuestion}>
         <View>
             <View style={{ margin: `${Taro.pxTransform(15)} 0` }}>{props.catelog.title}</View>
             <AtRate customStyle={{ margin: `${Taro.pxTransform(15)} 0` }} value={props.catelog.level} />
