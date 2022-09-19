@@ -2,7 +2,7 @@
 
 ### 介绍
 
-基于`Taro`与`NestJS`开发技术刷题小程序，技术栈主要是`taro+typescript+nestjs+postgresql`，由于已经学过一段时间React，但工作上总是用不上，小项目也写过，但没有使用`React`写过正经一点的项目，主要是借助此项目重新总结`React`核心概念，打造一个实战项目，如果你也正在学习`React`和`typescript`，不妨看看此项目，此项目会持续更新，欢迎watch和star～
+基于`Taro`与`NestJS`开发技术刷题小程序，技术栈主要是`taro+typescript+nestjs+postgresql`，主要是借助此项目重新总结`React`核心概念，打造一个实战项目，如果你也正在学习`React`和`typescript`，不妨看看此项目，此项目会持续更新，欢迎watch和star～
 
 ### 功能列表
 
