@@ -61,10 +61,13 @@ export default class TaroParser extends Component<Props, State> {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.content != this.props.content) {
-      this.convert(nextProps).then(() => {
+      this.convert(nextProps).then((nodes) => {
         if (this.props.onLoaded) {
           this.props.onLoaded()
         }
+        this.setState({
+          nodes: nodes as Data
+        })
       }).catch((e) => {
         console.log(e)
       })
